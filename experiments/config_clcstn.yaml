@@ -1,0 +1,47 @@
+base_dir: data/model
+log_level: INFO
+data:
+  batch_size: 32
+  dataset_dir: data/geopotential/
+  kernel_file: data/geopotential/kernel_info.pkl
+  test_batch_size: 128
+
+model:
+  model_name: CLCSTN
+  cl_decay_steps: 2000
+  seq_len: 12
+  horizon: 12
+  input_dim: 1
+  output_dim: 1
+  l1_decay: 0
+  max_view: 1
+  node_num: 2048
+  block_num: 4 
+  hidden_units: 64 
+  use_curriculum_learning: true
+  embed_dim: 8
+  lck_structure: [10, 8, 6]
+  location_dim: 2
+
+train:
+  base_lr: 0.005
+  dropout: 0
+  epoch: 0
+  epochs: 100
+  epsilon: 0.001
+  log_dir: experiments/geopotential
+  lr_decay_ratio: 0.05
+  max_grad_norm: 5
+  max_to_keep: 100
+  min_learning_rate: 1.0e-08
+  optimizer: adam
+  patience: 50
+  steps:
+  - 10
+  - 20
+  - 30
+  - 40
+  - 50
+  test_every_n_epochs: 10
+  experiment_name: 'CLCSTN_geopotential_all_2022' # 2021~2025
+gpu: 2
