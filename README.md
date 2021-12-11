@@ -26,7 +26,7 @@ The raw datasets WeatherBench([Arxiv](https://arxiv.org/abs/2002.00469)) can be 
 Dump them into `dataset_release/` files, and run the following commands to generate train/test/val dataset.
 ```bash
 # Dataset preprocess
-python scripts/generate_training_data  --input_seq_len=12 --output_horizon_len=12
+python scripts/generate_training_data.py  --input_seq_len=12 --output_horizon_len=12
 ```
 
 
