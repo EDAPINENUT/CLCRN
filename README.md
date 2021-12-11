@@ -1,13 +1,12 @@
 # Conditional Local Convolution for Spatio-Temporal Meteorological Forecasting
 
 
-This is a PyTorch implementation of CLCRN in the following paper: 
+This is a Official PyTorch implementation of CLCRN in the following paper: 
 
 
-## Requirements
+## Basic Requirements
 * torch>=1.7.0 
 * torch-geometric-temporal (installation see [Github: torch_geometric_temporal](https://github.com/benedekrozemberczki/pytorch_geometric_temporal))
-* xarray
 
 Dependency can be installed using the following command:
 ```bash
@@ -17,7 +16,7 @@ conda activate CLCRN_env
 
 ## Data Preparation
 #### 1） Using the preprocessed dataset:
- The four datasets after preprocessed are available at [Google Drive](https://drive.google.com/drive/folders/1sPCg8nMuDa0bAWsHPwskKkPOzaVcBneD?usp=sharing).
+ The four datasets after preprocessed are available at [Google Drive](https://drive.google.com/drive/u/1/folders/12y539wx2-kuCVlGkE09pRLl-ktVZchLO).
 
 Download the dataset and copy it into `data/` dir. And Unzip them, and obtain `data/{cloud_cover,component_of_wind,humidity,temperature}/`
 
@@ -28,7 +27,6 @@ Dump them into `dataset_release/` files, and run the following commands to gener
 ```bash
 # Dataset preprocess
 python scripts/generate_training_data  --input_seq_len=12 --output_horizon_len=12
-                                       --k_neighbors=25   --local_map=fast 
 ```
 
 
@@ -51,7 +49,14 @@ python train_baseline.py --config_filename=./experiments/config_baseline.yaml
 
 If you find this repository, e.g., the code and the datasets, useful in your research, please cite the following paper:
 ```
-TBD
+@misc{lin2021conditional,
+      title={Conditional Local Convolution for Spatio-temporal Meteorological Forecasting}, 
+      author={Haitao Lin and Zhangyang Gao and Yongjie Xu and Lirong Wu and Ling Li and Stan. Z. Li},
+      year={2021},
+      eprint={2101.01000},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
 
 ## Acknowledgement

@@ -10,16 +10,16 @@ model:
   model_name: ASTGCN #DCRNN, GConvGRU, AGCRN, TGCN, ASTGCN, MSTGCN, STGCN {RNN model: DCRNN, GConvGRU, AGCRN, TGCN, ATT model: ASTGCN, MSTGCN, STGCN}
   seq_len: 12
   horizon: 12
-  input_dim: 2 # component_of_wind:2 others:1
-  output_dim: 2 # component_of_wind:2 others:1
+  input_dim: 2 
+  output_dim: 2 
   l1_decay: 0
   max_view: 1 # AGCRN:2 others:1
   node_num: 2048
   use_curriculum_learning: true
   cl_decay_steps: 2000
   
-  layer_num: 2 # For RNN model
-  rnn_units: 32 # For RNN model {AGCRN:32, DCRNN:64, GConvGRU:64, TGCN:128}
+  layer_num: 2 
+  rnn_units: 32 # For RNN model 
   embed_dim: 4 # For AGCRN
   block_num: 1 # For Attention model {MSTGCN:4 ASTGCN:1}
   hidden_units: 64 # For Attention model {MSTGCN: 64, ASTGCN:64, STGCN:128}
@@ -45,5 +45,5 @@ train:
   - 40
   - 50
   test_every_n_epochs: 10
-  experiment_name: 'ASTGCN_2024_cloud_cover' # 2022~2024
-gpu: 7
+  experiment_name: 'ASTGCN_cloud_cover' # 2022~2024
+gpu: 0
