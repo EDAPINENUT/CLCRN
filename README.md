@@ -31,7 +31,7 @@ python scripts/generate_training_data.py  --input_seq_len=12 --output_horizon_le
 
 
 ## Training the Model
-The configuration is set in `/experiments/config_clcrn.yaml` file for training process. There are three config files for clcrn/clcstn/baselines training. Run the following commands to train the target model.
+The configuration is set in `/experiments/config_clcrn.yaml` file for training process. There are two config files for clcrn/clcstn training. Run the following commands to train the target model.
 
 ```bash
 # CLCRN
