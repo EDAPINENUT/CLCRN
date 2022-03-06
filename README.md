@@ -16,7 +16,7 @@ conda activate CLCRN_env
 
 ## Data Preparation
 #### 1） Using the preprocessed dataset:
- The four datasets after preprocessed are available at [Google Drive](https://drive.google.com/drive/u/1/folders/12y539wx2-kuCVlGkE09pRLl-ktVZchLO).
+ The four datasets after preprocessed are available at [Google Drive](https://drive.google.com/drive/folders/1sPCg8nMuDa0bAWsHPwskKkPOzaVcBneD?usp=sharing).
 
 Download the dataset and copy it into `data/` dir. And Unzip them, and obtain `data/{cloud_cover,component_of_wind,humidity,temperature}/`
 
