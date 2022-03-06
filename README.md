@@ -39,9 +39,6 @@ python train_clcrn.py --config_filename=./experiments/config_clcrn.yaml
 
 # CLCSTN
 python train_clcstn.py --config_filename=./experiments/config_clcstn.yaml
-
-# Baselines
-python train_baseline.py --config_filename=./experiments/config_baseline.yaml
 ```
 
 
